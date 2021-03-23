@@ -1,16 +1,15 @@
 // capitalizeFirstLetters.js
-import { strictEqual } from 'assert';
+
+const assert = require('assert');
+
 
 // WRITE THE ACTUAL FUNCTION HERE
-
 function capitalizeFirstLetters(string) {
-  let convertedArray = [];
-
-  string.split(' ').forEach((word) => {
-    convertedArray.push(word.charAt(0).toUpperCase() + word.slice(1));
-  });
-  
-  return convertedArray.join(' ');
+  let words = new Array();
+  string.split` `.forEach(word => word.length > 0
+  	?words.push(word[0].toUpperCase() + word.slice(1))
+    :words.push(''))
+  return words.join` `;
 }
 
 // Check that capitalizeFirstLetters is a function
