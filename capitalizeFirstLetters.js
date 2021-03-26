@@ -14,19 +14,19 @@ function capitalizeFirstLetters(string) {
 
 
 // Check that it works with several words
-assert.strictEqual(capitalizeFirst("i am learning TDD"), "I Am Learning TDD")
+assert.strictEqual(capitalizeFirstLetters("i am learning TDD"), "I Am Learning TDD")
 
 // Check that it works with one word
-assert.strictEqual(capitalizeFirst("javascript"), 'Javascript');
+assert.strictEqual(capitalizeFirstLetters("javascript"), 'Javascript');
 
 // Check that it works with one letter
-assert.strictEqual(capitalizeFirst("m"), 'M');
+assert.strictEqual(capitalizeFirstLetters("m"), 'M');
 
 // Check that it works with an empty string
-assert.strictEqual(capitalizeFirst(""), "");
+assert.strictEqual(capitalizeFirstLetters(""), "");
 
 // Check that it works with a whitespace string
-assert.strictEqual(capitalizeFirst(" "), " ");
+assert.strictEqual(capitalizeFirstLetters(" "), " ");
 
 // Check that it works with an integer
-assert.strictEqual(capitalizeFirst(1), 1);
+assert.strictEqual(capitalizeFirstLetters(1), 1);
