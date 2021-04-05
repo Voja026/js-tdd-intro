@@ -1,32 +1,41 @@
-    // capitalizeFirstLetters.js
-
+// capitalizeFirst.js
 const assert = require('assert');
 
-
 // WRITE THE ACTUAL FUNCTION HERE
-function capitalizeFirstLetters(string) {
-  let words = new Array();
-  string.split` `.forEach(word => word.length > 0
-  	?words.push(word[0].toUpperCase() + word.slice(1))
-    :words.push(''))
-  return words.join` `;
-}
 
+function capitalizeFirstLetters(input) {
+    let output = '';
+    for (let i = 0; i < input.length; i++) {
+        if (i === 0) {
+            output += input[0].toUpperCase();
+        } else if (i > 0) { 
+            if (input[i-1] === ' ') { 
+                output += input[i].toUpperCase();
+            } else if (input[i-1] !== ' ') { 
+                output += input[i];
+            }
+        }
+    }
+    return output;
+};
 
-// Check that it works with several words
-assert.strictEqual(capitalizeFirstLetters("i am learning TDD"), "I Am Learning TDD")
+// Check c'est bien une fonction
+assert.strictEqual(typeof capitalizeFirstLetters, 'function');
 
-// Check that it works with one word
-assert.strictEqual(capitalizeFirstLetters("javascript"), 'Javascript');
+// Check que la fonction accepte un seul argument 
+assert.strictEqual(capitalizeFirstLetters.length, 1);
 
-// Check that it works with one letter
-assert.strictEqual(capitalizeFirstLetters("m"), 'M');
+// check que la fonction transforme bien la chaine de caractère avec plusieurs mots
+assert.strictEqual(capitalizeFirstLetters('je suis un test'), 'Je Suis Un Test');
 
-// Check that it works with an empty string
-assert.strictEqual(capitalizeFirstLetters(""), "");
+// check que la fonction transforme bien la chaine de caractère avec un seul mot
+assert.strictEqual(capitalizeFirstLetters('test'), 'Test');
 
-// Check that it works with a whitespace string
-assert.strictEqual(capitalizeFirstLetters(" "), " ");
+// check que la fonction marche pour une chaine de caractère d'un seul caractère
+assert.strictEqual(capitalizeFirstLetters('z'), 'Z');
 
-// Check that it works with an integer
-assert.strictEqual(capitalizeFirstLetters(1), 1);
+// check que la fonction marche pour une chaine de caractère vide
+assert.strictEqual(capitalizeFirstLetters(''), '');
+
+//check que la function marche avec une chaine de caractère vide 
+assert.strictEqual(capitalizeFirstLetters(''), '');
