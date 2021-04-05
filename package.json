@@ -8,15 +8,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Voja026/js-tdd-intro.git"
+    "url": "git+https://github.com/benoitredondo/js-tdd-intro.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Voja026/js-tdd-intro/issues"
+    "url": "https://github.com/benoitredondo/js-tdd-intro/issues"
   },
-  "homepage": "https://github.com/Voja026/js-tdd-intro#readme",
+  "homepage": "https://github.com/benoitredondo/js-tdd-intro#readme",
   "dependencies": {
     "mocha": "^8.3.2"
   }
